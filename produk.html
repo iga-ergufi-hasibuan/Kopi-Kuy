@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <title>Produk</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css">
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        /* tulis kode CSS internal di bawah sini */
+
+        .bg-cokelat {
+            background-color: rgb(141, 106, 42) !important;
+            border-color: rgb(141, 106, 42) !important;
+        }
+
+        body {
+            background-image: url(images/background/bgkopi.png);
+            background-size: 20%;
+        }
+
+        /* Batas Akhir penulisan kode CSS internal */
+    </style>
+</head>
+
+<body>
+    <!-- Tulis Kode Bootstrap Di Bawah Sini -->
+
+    <nav class="navbar navbar-dark bg-cokelat navbar-expand-lg bisadicopy">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo/logo_kuy.png" height="40" alt="image">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav11"
+                aria-controls="navbarNav11" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav11">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html#best-seller">Best Seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#our-team">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#review">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact-us">Contact US</a>
+                    </li>
+
+                </ul>
+                <a class="btn btn-outline-light ms-md-3" href="https://wa.me/6281290465033">
+                    <i class="bi bi-whatsapp"></i> Chat
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="riki-block produk text-center my-5 py-5">
+        <div class="container">
+            <h1>Pilih Produk Anda</h1>
+            <p class="text-center fs-5 text-secondary">Kualitas Terbaik Biji Kopi Pilihan, Langsung dari Petani Ternama
+            </p>
+            <hr class="border border-warning border-3 opacity-75 bg-cokelat">
+
+            <!-- Ini Untuk Select -->
+
+            <div class="form-floating col-md-6 mx-auto">
+                <select class="form-select" id="select_kopi" aria-label="Floating label select example">
+                    <option disabled selected>-</option>
+                    <option value="arabica">Arabica</option>
+                    <option value="robusta">Robusta</option>
+                    <option value="nonkopi">Non Kopi</option>
+                    <option value="snack">Snack</option>
+                </select>
+                <label for="select_kopi">Pilih Jenis Kopi</label>
+            </div>
+
+            <div id="baris_produk" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 text-center mt-5">
+            </div>
+        </div>
+    </section>
+
+    <footer class="riki-block footer-small py-4 bg-cokelat">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <p>© 2023 Kopy Kuy &amp; Team. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Batas Akhir penulisan kode Bootstrap -->
+    <script>
+        /* Tulis Javascript Di bawah Sini */
+
+        var sumber = "https://rikikurnia.com/prakerja/api/kopi"
+        var sumber2 = "data.json"
+
+        select_kopi.onchange = function () {
+            var dipilih = select_kopi.value;
+
+            $.getJSON(sumber2).then(function (data) {
+                var data_kopi = data[dipilih];
+
+                baris_produk.innerHTML = "";
+                data_kopi.forEach(item => {
+                    baris_produk.innerHTML += `
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="${item.foto}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.nama}</h5>
+                            <div class="row hargasize my-4">
+                                <div class="col">
+                                    ${item.size}
+                                </div>
+                                <div class="col fw-bold text-primary">
+                                    ${item.harga}
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-dark w-100" onclick="beliProduk('${item.nama}', '${item.harga}')">
+                                <i class="bi bi-bag-heart-fill"></i> Beli
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+                });
+            });
+        };
+
+        // Fungsi untuk menambah produk ke keranjang belanja
+        function beliProduk(namaProduk, hargaProduk) {
+            // Menampilkan notifikasi berhasil dibeli
+            alert("Berhasil dibeli: " + namaProduk + " dengan harga " + hargaProduk);
+        }
+
+        /* Batas Akhir penulisan kode Javascript */
+    </script>
+</body>
+
+</html>

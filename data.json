@@ -1,0 +1,100 @@
+{
+    "arabica": [
+        {
+            "foto": "images/produk/product_capuchino.jpg",
+            "nama": "Cappuccino Arabica",
+            "size": "150 ml",
+            "harga": "15.000"
+        },
+        {
+            "foto": "images/produk/product_espresso.jpg",
+            "nama": "Pahit Arabica",
+            "size": "100 ml",
+            "harga": "13.000"
+        },
+        {
+            "foto": "images/produk/product_latte.jpg",
+            "nama": "Latte Arabica",
+            "size": "100 ml",
+            "harga": "17.000"
+        }
+    ],
+    "robusta": [
+        {
+            "foto": "images/produk/product_kopi_susu.jpg",
+            "nama": "Kopsus Robusta",
+            "size": "100 ml",
+            "harga": "12.000"
+        },
+        {
+            "foto": "images/produk/product_latte.jpg",
+            "nama": "Latte Robusta",
+            "size": "150 ml",
+            "harga": "18.000"
+        }
+    ],
+    "nonkopi": [
+        {
+            "foto": "https://cdn0-production-images-kly.akamaized.net/mF_hcPUrspteuLRnEOt5t5tUwFw=/1x41:1000x604/1200x675/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4116045/original/096016200_1659931714-shutterstock_2137989959.jpg",
+            "nama": "Es Dawet",
+            "size": "100 ml",
+            "harga": "9.000"
+        },
+        {
+            "foto": "https://sweetrip.id/wp-content/uploads/2021/04/edelweiss_rempahindo_156668874_155657749731420_4884391317631887016_n.jpg",
+            "nama": "Cincau",
+            "size": "150 ml",
+            "harga": "10.000"
+        },
+        {
+            "foto": "https://akcdn.detik.net.id/visual/2023/01/30/matcha_169.jpeg?w=650",
+            "nama": "Matcha",
+            "size": "100 ml",
+            "harga": "16.000"
+        },
+        {
+            "foto": "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/10/16/2734338188.jpg",
+            "nama": "Taro",
+            "size": "100 ml",
+            "harga": "12.000"
+        },
+        {
+            "foto": "https://ds393qgzrxwzn.cloudfront.net/resize/m600x500/cat1/img/images/0/4IxUlwD4or.jpg",
+            "nama": "Cokelat",
+            "size": "100 ml",
+            "harga": "22.000"
+        }
+    ],
+    "snack": [
+        {
+            "foto": "images/produk/fries.jpg",
+            "nama": "Kentang Goreng",
+            "size": "50 gram",
+            "harga": "12.000"
+        },
+        {
+            "foto": "images/produk/pizza.jpg",
+            "nama": "Pizza",
+            "size": "Medium",
+            "harga": "30.000"
+        },
+        {
+            "foto": "images/produk/burger.jpg",
+            "nama": "Burger",
+            "size": "Small",
+            "harga": "25.000"
+        },
+        {
+            "foto": "images/produk/chicken.jpg",
+            "nama": "Chicken Wings",
+            "size": "Small",
+            "harga": "20.000"
+        },
+        {
+            "foto": "images/produk/onion.jpg",
+            "nama": "Onion Rings",
+            "size": "Small",
+            "harga": "18.000"
+        }
+    ]
+}
